@@ -1,6 +1,6 @@
 #pragma once
 #include"Shape.h"
-#include"Point.h"
+#include"Point2D.h"
 namespace geometry
 {
     class Square : public Shape
@@ -10,9 +10,9 @@ namespace geometry
     ~Square();
 
     public:
-    float length();
-    void plot();
-    float perimeter();
+    float length() const;
+    void plot() override;
+    float perimeter() override;
     float area();
 
     private:

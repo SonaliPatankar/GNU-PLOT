@@ -16,32 +16,32 @@ Triangle ::~Triangle()
 {
 }
 
-Point2D Triangle ::pointP1()
+Point2D Triangle ::pointP1() const
 {
     return mPointP1;
 }
-Point2D Triangle ::pointP2()
+Point2D Triangle ::pointP2() const
 {
     return mPointP2;
 }
-Point2D Triangle ::pointP3()
+Point2D Triangle ::pointP3() const
 {
     return mPointP3;
 }
 void Triangle ::plot()
 {
-    ofstream MyFile("D:/sonali_workspace/C++/2DShapes/textfiles/triangle.txt", ofstream::trunc);
+    ofstream myFile("D:/sonali_workspace/C++/2DShapes/textfiles/triangle.txt", ofstream::trunc);
     // Write to the file
-    MyFile << mPointP1.xCordinate() << " " << mPointP1.yCordinate();
-    MyFile << "\n";
-    MyFile << mPointP2.xCordinate() << " " << mPointP2.yCordinate();
-    MyFile << "\n";
-    MyFile << mPointP3.xCordinate() << " " << mPointP3.yCordinate();
-    MyFile << "\n";
-    MyFile << mPointP1.xCordinate() << " " << mPointP1.yCordinate();
+    myFile << mPointP1.xCordinate() << " " << mPointP1.yCordinate();
+    myFile << "\n";
+    myFile << mPointP2.xCordinate() << " " << mPointP2.yCordinate();
+    myFile << "\n";
+    myFile << mPointP3.xCordinate() << " " << mPointP3.yCordinate();
+    myFile << "\n";
+    myFile << mPointP1.xCordinate() << " " << mPointP1.yCordinate();
 
     //   Close the file
-    MyFile.close();
+    myFile.close();
 }
 float Triangle ::perimeter()
 {

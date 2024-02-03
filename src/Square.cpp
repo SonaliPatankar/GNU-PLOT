@@ -1,45 +1,43 @@
 #include "../headers/Square.h"
-#include<fstream>
+#include <fstream>
 using namespace geometry;
 using namespace std;
 
-Square :: Square(float length)
+Square ::Square(float length)
 {
     mLength = length;
 }
-Square :: ~Square()
+Square ::~Square()
 {
-
 }
 
-float Square :: length()
+float Square ::length() const
 {
     return mLength;
 }
 
-void Square :: plot()
+void Square ::plot()
 {
-    
+
     Point2D origin;
-     ofstream MyFile("D:/sonali_workspace/C++/2DShapes/textfiles/square.txt", ofstream::trunc);
+    ofstream myFile("D:/sonali_workspace/C++/2DShapes/textfiles/square.txt", ofstream::trunc);
     //   Write to the file
-      
-    MyFile<< origin.xCordinate() << ", " << origin.yCordinate() << " \n"
-    << mLength <<", "<<0<< "\n" 
-    << mLength << ", " << mLength << " \n"
-    <<0<< ", " << mLength << "\n"
-    <<origin.xCordinate() << ", " << origin.yCordinate();
+
+    myFile << origin.xCordinate() << ", " << origin.yCordinate() << " \n"
+           << mLength << ", " << 0 << "\n"
+           << mLength << ", " << mLength << " \n"
+           << 0 << ", " << mLength << "\n"
+           << origin.xCordinate() << ", " << origin.yCordinate();
 
     //   Close the file
-      MyFile.close();
+    myFile.close();
 }
-float Square :: perimeter()
+float Square ::perimeter()
 {
-    float c= 2.0*(mLength + mLength);
+    float c = 2.0 * (mLength + mLength);
     return c;
 }
-float Square :: area()
+float Square ::area()
 {
-    return mLength*mLength;
+    return mLength * mLength;
 }
-

@@ -1,6 +1,6 @@
 #pragma once
 #include"Shape.h"
-#include"Point.h"
+#include"Point2D.h"
 namespace geometry
 {
     class Rectangle : public Shape
@@ -11,10 +11,10 @@ namespace geometry
     ~Rectangle();
 
     public:
-    float length();
-    float breadth();
-    void plot();
-    float perimeter();
+    float length() const;
+    float breadth() const;
+    void plot() override;
+    float perimeter() override;
     float area();
 
     private:

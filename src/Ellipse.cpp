@@ -17,7 +17,7 @@ Ellipse :: ~Ellipse()
 void Ellipse :: plot()
 {
     int numOfPoints = 250;
-    ofstream MyFile("D:/sonali_workspace/C++/2DShapes/textfiles/ellipse.txt", ofstream::trunc);
+    ofstream myFile("D:/sonali_workspace/C++/2DShapes/textfiles/ellipse.txt", ofstream::trunc);
     //   Write to the file   
     for (int i = 0; i < numOfPoints; ++i)
         {
@@ -25,11 +25,11 @@ void Ellipse :: plot()
             double angleTheta = 2.0 * M_PI * i / numOfPoints;
             double x = origin.xCordinate() + mMajorAxis * cos(angleTheta);
             double y = origin.yCordinate() + mMinorAxis * sin(angleTheta);
-            MyFile << x << " " << y << " " << mMajorAxis <<  mMinorAxis<< std::endl;
+            myFile << x << " " << y << " " << mMajorAxis <<  mMinorAxis<< std::endl;
         }
 
     //   Close the file
-      MyFile.close();
+      myFile.close();
 }
 float Ellipse :: perimeter()
 {

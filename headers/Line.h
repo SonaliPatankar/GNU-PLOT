@@ -1,5 +1,5 @@
 #pragma once
-#include"Point.h"
+#include"Point2D.h"
 #include"Shape.h"
 
 namespace geometry
@@ -12,10 +12,10 @@ class Line : public Shape
     ~Line();
 
     public:
-    Point2D pointP1();
-    Point2D pointP2();
-    void plot();
-    float perimeter();
+    Point2D pointP1() const;
+    Point2D pointP2() const;
+    void plot()override;
+    float perimeter()override;
     
     private:
     Point2D mPointP1;
