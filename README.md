@@ -31,6 +31,12 @@ Header: include/Circle.h
  
 Implementation: src/Circle.cpp
 
+## Output
+circle
+
+![Screenshot (156)](https://github.com/SonaliPatankar/GNU-PLOT/assets/158050645/7a613fdb-d9bb-4379-af7a-351eb8e16d65)
+
+Simillary other shapes will be drawn on GNU-PLOT.
 ## Building and Running
 1. Clone or download the repository to your local machine.
 ```bash
